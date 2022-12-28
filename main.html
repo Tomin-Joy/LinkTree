@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculator</title>
+</head>
+<body>
+  <h1>Calculator</h1>
+  <form>
+    <input type="text" id="input1" value="0">
+    <select id="operator">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+    </select>
+    <input type="text" id="input2" value="0">
+    <button type="button" id="calculate-button">Calculate</button>
+  </form>
+  <div id="result"></div>
+  <script>
+    // Get a reference to the form elements
+    const input1 = document.getElementById("input1");
+    const input2 = document.getElementById("input2");
+    const operator = document.getElementById("operator");
+    const calculateButton = document.getElementById("calculate-button");
+    const resultDiv = document.getElementById("result");
+
+    // Add an event listener to the Calculate button
+    calculateButton.addEventListener("click", function() {
+      // Get the values of the form inputs
+      const input1Value = input1.value;
+      const input2Value = input2.value;
+      const operatorValue = operator.value;
+
+      // Perform the calculation
+      let result;
+      if (operatorValue === "+") {
+        result = parseInt(input1Value) + parseInt(input2Value);
+      } else if (operatorValue === "-") {
+        result = parseInt(input1Value) - parseInt(input2Value);
+      } else if (operatorValue === "*") {
+        result = parseInt(input1Value) * parseInt(input2Value);
+      } else if (operatorValue === "/") {
+        result = parseInt(input1Value) / parseInt(input2Value);
+      }
+
+      // Display the result
+      resultDiv.textContent = result;
+    });
+  </script>
+</body>
+</html>
