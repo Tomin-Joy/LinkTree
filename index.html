@@ -2,20 +2,21 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="keywords" content="Tomin,Tomin Joy,Thomas,Kadaprayil,Tomin Joy Kadaprayil" />
-
+  <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
   <title>Tomin Joy's | Linktree</title>
   <!-- Favicon -->
   <link rel="icon" href="https://avatars.githubusercontent.com/u/67215154?v=4" type="image/x-icon" />
   <!-- Font Awesome icons -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
   <!-- Core theme CSS -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
+  <script src="./projects.js"></script>
 </head>
 
-<body>
+<body onload="fill_data()">
   <!-- Parallax Pixel Background Animation -->
   <section class="animated-background">
     <div id="stars1"></div>
@@ -25,14 +26,14 @@
   <!-- End of Parallax Pixel Background Animation -->
 
   <a id="profilePicture">
-    <img src="https://avatars.githubusercontent.com/u/67215154?v=4" alt="Profile Picture">
+    <img src="https://avatars.githubusercontent.com/u/67215154?v=4" alt="Profile Picture" />
   </a>
 
   <div class="overlay" id="popup">
     <div class="popup">
       <div class="popup-photo">
         <a href="https://avatars.githubusercontent.com/u/67215154?v=4" target="_blank">
-          <img src="https://avatars.githubusercontent.com/u/67215154?v=4" alt="Profile Picture">
+          <img src="https://avatars.githubusercontent.com/u/67215154?v=4" alt="Profile Picture" />
         </a>
       </div>
       <a class="popup-close" onclick="history.back()">&times;</a>
@@ -60,55 +61,24 @@
     <a class="link" href="https://www.linkedin.com/in/tomin-joy/" target="_blank">
       <i class="fab fa-linkedin">&nbsp;</i>Linkedin
     </a>
-
   </div>
   <div class="title">
-    <a href="main.html" target="_blank" style="text-decoration: none ;color: aliceblue;">my main projects</a>
+    <a href="main.html" target="_blank" style="text-decoration: none; color: aliceblue">my main projects</a>
   </div>
-  <div id="links">
-    <a href="https://asthra.sjcetpalai.ac.in/" class="link" target="_blank">
-      Asthra-8.0
+  <script type="text/x-handlebars-template" id="template">
+    {{#each projects}}
+    <a href= "{{this.URL}}" class="link" target="_blank">
+      <div class="name-tab"><span class="name">{{this.name}}</span></div>
+      <span class="hidden">{{this.description}}</span>
     </a>
-    <a href="https://simple-qr-maker.netlify.app/" class="link" target="_blank">
-      An add-free QR code generator
-    </a>
-    <a href="https://tominjoy2.netlify.app/" class="link" target="_blank">
-      An Experimental Portfolio
-    </a>
-    <a href="https://ecsa.sjcetpalai.ac.in" class="link" target="_blank">
-      Landing page of ECSA
-    </a>
-    <a href="https://medlab-mini.netlify.app" class="link" target="_blank">
-      MedLab - A patient tracking system for doctors
-    </a>
-    <a href="https://asthra7.netlify.app" class="link" target="_blank">
-      Asthra-7.0
-    </a>
-    <a href="https://khm2022.netlify.app" class="link" target="_blank">
-      KHM'22 website
-    </a>
-    <a href="https://sightsmp.netlify.app" class="link" target="_blank">
-      Sight SMP website
-    </a>
-    <a href="https://cipherguys.github.io/CovidSJCET/" class="link" target="_blank">
-      CovidSJCET
-    </a>
-    <a href="https://ktureqhrcalc.netlify.app" class="link" target="_blank">
-      Attendence-Requirement Calculator
-    </a>
-    <a href="https://ctf-asthra22.herokuapp.com/" class="link" target="_blank">
-      A CTF platform
-    </a>
-    <a href="https://cipherguys.github.io/JY-prayerReq/" class="link" target="_blank">
-      Jesus Youth Prayer Request
-    </a>
-    <a href="https://cipherguys.github.io/website-rater/" class="link" target="_blank">
-      Portfolio Rater
-    </a>
+    {{/each}}
+  </script>
+  <div id="prlinks">
+
   </div>
-  <div id="hashtag">
-    made with ❤ by tomin
-  </div>
+
+
+  <div id="hashtag">made with ❤ by tomin</div>
 </body>
 
 </html>
