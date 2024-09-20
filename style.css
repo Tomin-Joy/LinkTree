@@ -111,6 +111,7 @@ body {
 
   transition-duration: var(--duration);
 }
+
 #prlinks .link .name-tab {
   display: flex;
   justify-content: center;
@@ -147,6 +148,38 @@ body {
   margin: 20px;
   text-align: justify;
   transition-duration: var(--duration);
+}
+#prlinks .link .icon-tab {
+  right: 50%;
+  top: 50%;
+  position: absolute;
+  display: flex;
+}
+#prlinks .link:hover .icon-tab {
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translateY(-30%);
+  margin-right: 20px;
+  margin-top: 10px;
+  transition-duration: var(--duration);
+}
+#prlinks .link .icon-tab .icon {
+  transform: scale(1.2);
+  text-decoration: none;
+  color: var(--bgColor);
+  transition-duration: var(--duration);
+}
+
+#prlinks .link .icon-tab .icon:hover {
+  transform: scale(1.5);
+  transition-duration: var(--duration);
+}
+
+#prlinks .link .icon-tab .disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  transform: scale(1);
 }
 
 #hashtag {
