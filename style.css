@@ -91,11 +91,9 @@ body {
   margin: 0px;
 }
 
-@media (hover: hover) {
-  .link:hover {
-    background-color: var(--accentColor);
-    color: var(--bgColor);
-  }
+.link:hover {
+  background-color: var(--accentColor);
+  color: var(--bgColor);
 }
 
 .link:active {
