@@ -66,7 +66,7 @@ function fill_data() {
         description:
           "CovidSJCET, a webpage to get realtime covid statistics of SJCET",
         deployed: true,
-        public: true,
+        public: false,
         cUrl: "https://github.com/Tomin-Joy/CovidSJCET",
       },
       {
