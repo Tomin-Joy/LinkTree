@@ -3,7 +3,7 @@ function fill_data() {
     projects: [
       {
         name: "Asthra-8.0",
-        URL: "https://asthra.sjcetpalai.ac.in/",
+        URL: "https://asthra8.vercel.app",
         description:
           "A webapp to showcase and manage various events, workshops and competition of Asthra 8.0",
         deployed: true,
