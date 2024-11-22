@@ -2,6 +2,13 @@ function fill_data() {
   var data = {
     projects: [
       {
+        name: "Modache: E-Commerce webapp",
+        description: "An E-Commerce Website made in Typescript using NextJs ",
+        URL:"https://modache.vercel.app",
+        deployed:true,
+        public:false,
+      },
+      {
         name: "Asthra-8.0",
         URL: "https://asthra8.vercel.app",
         description:
